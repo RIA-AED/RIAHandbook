@@ -1,9 +1,7 @@
-import axios from "axios";
-
 export default defineEventHandler(async (event) => {
   const pageName = getQuery(event)?.page;
 
-  const fetchPage = await axios.get("https://wiki.ria.red/api.php", {
+  const fetchPage = await $fetch("https://wiki.ria.red/api.php", {
     params: {
       action: "parse",
       page: pageName,
@@ -13,8 +11,8 @@ export default defineEventHandler(async (event) => {
     },
   });
 
-  if (fetchPage.status === 200) {
-    return fetchPage.data;
+  if (fetchPage) {
+    return fetchPage;
   } else {
     return {};
   }
