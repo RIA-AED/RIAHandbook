@@ -4,7 +4,6 @@
       show-trigger="bar"
       :width="280"
       :collapsed-width="0"
-      :native-scrollbar="false"
       class="bg-zinc-100"
     >
       <SideBar />

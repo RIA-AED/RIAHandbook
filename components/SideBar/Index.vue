@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="sticky top-0 px-8">
-      <SideBarHead />
+    <div class="sticky top-0 px-8 bg-zinc-100 bg-opacity-50 backdrop-blur z-10">
+      <SideBarHead :book-name="bookStore.currentBook?.label" />
       <div class="h-0 w-full border-b mb-2"></div>
     </div>
     <NMenu :options="menuOptions" @update:value="onUpdate" />
