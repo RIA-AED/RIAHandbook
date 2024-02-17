@@ -8,8 +8,8 @@ export const useBookStore = defineStore({
     currentArticleKey: "新人引导页",
     books: <Book[]>[
       {
-        key: "手册",
-        label: "手册",
+        key: "了解RIA",
+        label: "了解 RIA",
         articles: [
           {
             type: "group",
