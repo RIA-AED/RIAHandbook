@@ -1,9 +1,7 @@
 <template>
   <NSpin :show="fetchPage.pending.value">
     <div v-if="fetchPage.pending.value">
-      <NSkeleton height="40px" width="66%" />
-      <NSkeleton text :repeat="2" />
-      <NSkeleton text style="width: 60%" />
+      <FakeArticle />
     </div>
     <NEmpty v-else-if="empty"></NEmpty>
     <div v-else class="mediawiki-article">
@@ -187,10 +185,10 @@ type APIReturn = {
   h4,
   h5,
   h6 {
-    font-weight: 600;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    color: rgb(67, 60, 60);
+    font-weight: 600 !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    color: rgb(67, 60, 60) !important;
   }
 
   h1,
@@ -223,20 +221,26 @@ type APIReturn = {
 
   /* 主要标题 */
   h2 {
-    border-bottom: 0px;
-    border-top: 1px solid #ddd;
-    margin: 48px 0 16px;
-    padding-top: 24px;
-    letter-spacing: -0.02em;
-    line-height: 32px;
-    font-size: 24px;
+    margin: 48px 0 16px !important;
+    padding-top: 24px !important;
+    border-bottom: 0px !important;
+    border-top: 1px solid #ddd !important;
+    line-height: 32px !important;
+    font-size: 24px !important;
+    letter-spacing: -0.02em !important;
   }
 
   h3 {
-    margin: 32px 0 0;
-    letter-spacing: -0.01em;
-    line-height: 28px;
-    font-size: 20px;
+    margin: 32px 0 0 !important;
+    line-height: 28px !important;
+    font-size: 20px !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  h4 {
+    margin: 16px 0 0 !important;
+    line-height: 24px !important;
+    font-size: 16px !important;
   }
 
   /**
